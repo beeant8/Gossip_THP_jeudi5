@@ -1,0 +1,13 @@
+
+<% if @current_user %>
+ 	 <h1>Bienvenue <%= @current_user.name %> !</h1>
+ 	 <%= form_tag "/users/login", method: :delete do %>
+     <input type="submit" value="Déconnexion" />
+     <% end %>
+<% else %>
+ 	 <h1>Bienvenue visiteur anonyme !</h1>
+ 	 <a href="/users/login">S'identifier</a>
+	<% end %>
+
+<h2>Tu peux maintenant créer des potins, liker ceux des autres et les commenter! </h2>
+<p> Pour cela navigue sur le site à l'aide des boutons de la barre de navigation ci dessus!</p>
